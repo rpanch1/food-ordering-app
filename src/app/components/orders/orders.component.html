@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div id='div' class="col-md-10 order-md-2 mb-4">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Orders</span>
+        <span class="badge badge-secondary badge-pill">3</span>
+    </h4>
+
+
+    <ul class="list-group mb-3 sticky-top" *ngFor='let order of orders; let i=index'>
+        <small class="text-muted">order number: {{i}}</small>
+            <ul class="list-group sticky-top" *ngFor='let item of order.items'>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                        <h6 class="my-0">{{item.name}}</h6>
+                        <small class="text-muted">{{item.price | currency}}</small>
+                    </div>
+                </li>
+            </ul>
+            <li class="list-group-item d-flex justify-content-between">
+                <span>Total: <strong>{{order.total | currency}}</strong></span>
+                <div>
+                <button class="btn btn-success btn-sm" (click)="removeOrder(i, 'picked up')">Pick Up Order</button> 
+                <button class="btn btn-danger btn-sm" (click)="removeOrder(i, 'cancelled')">Cancel Order</button></div>
+            </li>
+        </ul>
+    
+</div>

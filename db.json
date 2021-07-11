@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "fullname": "Rishi Panchal",
+      "email": "r@p",
+      "password": "aaaaaa",
+      "address": "address",
+      "phone": "1234567890",
+      "card": "123455678",
+      "cart": [],
+      "order": [],
+      "id": 1
+    }
+  ]
+}

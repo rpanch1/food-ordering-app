@@ -1,0 +1,38 @@
+<app-header></app-header>
+<main role="main">
+
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Italian Cuisine</h1>
+        <p class="lead text-muted">Italian cuisine is synonymous with freshness. Of all the most typical dishes in this culinary style that are cooked, they are always pleasantly fresh, demonstrating their refined taste with each bite.</p>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row" >
+
+          <div class="col-md-4" *ngFor='let food of cuisine'>
+            <div class="card mb-4 box-shadow">
+              <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src={{food.image}} data-holder-rendered="true">
+              <div class="card-body">
+                <p class="card-text">{{food.description}}</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{food.name}}</li>
+                    <li class="list-group-item">Price: {{food.price | currency}}</li>
+                </ul>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn  btn-success" (click)='addToCart(food)'>Add to Cart</button>
+                  </div>
+                  <small class="text-muted">9 mins</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
