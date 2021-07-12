@@ -16,6 +16,7 @@ import { HeaderloginComponent } from './components/headerlogin/headerlogin.compo
 import { CartComponent } from './components/cart/cart.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 
 
 
@@ -31,7 +32,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     HeaderloginComponent,
     CartComponent,
     OrdersComponent,
-    ProfileComponent
+    ProfileComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
